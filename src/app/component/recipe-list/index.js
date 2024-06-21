@@ -12,11 +12,11 @@ export default function RecipesData({RecipeList}){
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 sm:grid-cols-2">
                 {
                     RecipeList&&RecipeList?
-                    RecipeList.map((recip)=>(
+                    RecipeList.map((recip,index)=>(
                         <Link href={`/recipe-list/${recip.id}`} >
                         <Card className="mt-10">
                             <CardContent className="bg-white rounded-md overflow-hidden shadow-md cursor-pointer hover:scale-[1.1] transition-all">
-                                <div className="w-full aspect-w-16 aspect-h-8 lg:h-80">
+                                <div className="w-full aspect-w-16 aspect-h-8 lg:h-80" ke={index}>
                                     <img src={recip.image}
                                     alt={recip.name}
                                      />
